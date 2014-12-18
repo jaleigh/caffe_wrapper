@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugCPUOnly|Win32">
+      <Configuration>DebugCPUOnly</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugCPUOnly|x64">
+      <Configuration>DebugCPUOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseCPUOnly|Win32">
+      <Configuration>ReleaseCPUOnly</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseCPUOnly|x64">
+      <Configuration>ReleaseCPUOnly</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\caffe_wrapper\src\CaffeWrapper.cpp" />
+    <ClCompile Include="..\..\..\caffe_wrapper\src\CNNEngine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\caffe_wrapper\src\CaffeWrapper.h" />
+    <ClInclude Include="..\..\..\caffe_wrapper\src\CNNEngine.h" />
+    <ClInclude Include="..\..\..\caffe_wrapper\src\host.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A05D422A-5234-407A-B575-B4C52898C4D2}</ProjectGuid>
+    <RootNamespace>CaffeWrapper</RootNamespace>
+    <ProjectName>CNNWrapper</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 6.5.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>CNNEngined_x86</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>CNNEngined_cpu_only_x86</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <TargetName>CNNEngine_x86</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>CNNEngine_cpu_only_x86</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>CNNEngine_x64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>CNNEngined_x64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|x64'">
+    <TargetName>CNNEngined_cpu_only_x64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|x64'">
+    <TargetName>CNNEngine_cpu_only_x64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>caffed_x86.lib;libprotobufd.lib;libboost_date_time-vc110-mt-gd-1_55.lib;libboost_thread-vc110-mt-gd-1_55.lib;libboost_chrono-vc110-mt-gd-1_55.lib;libboost_filesystem-vc110-mt-gd-1_55.lib;libboost_system-vc110-mt-gd-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)CNNEngined_x86.dll</OutputFile>
+      <ShowProgress>NotSet</ShowProgress>
+      <OptimizeReferences>false</OptimizeReferences>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x86 mkdir $(ProjectDir)..\..\bin\x86\
+if not exist $(ProjectDir)..\..\lib\x86 mkdir $(ProjectDir)..\..\lib\x86\
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x86
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x86
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x86\*.dll $(ProjectDir)..\..\bin\x86
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;CPU_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>caffed_cpu_only_x86.lib;libboost_date_time-vc110-mt-gd-1_55.lib;libboost_thread-vc110-mt-gd-1_55.lib;libboost_chrono-vc110-mt-gd-1_55.lib;libboost_filesystem-vc110-mt-gd-1_55.lib;libboost_system-vc110-mt-gd-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ShowProgress>NotSet</ShowProgress>
+      <OptimizeReferences>false</OptimizeReferences>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x86 mkdir $(ProjectDir)..\..\bin\x86\
+if not exist $(ProjectDir)..\..\lib\x86 mkdir $(ProjectDir)..\..\lib\x86\
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x86
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x86
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x86\*.dll $(ProjectDir)..\..\bin\x86
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>caffed_x64.lib;libprotobufd.lib;libboost_date_time-vc110-mt-gd-1_55.lib;libboost_thread-vc110-mt-gd-1_55.lib;libboost_chrono-vc110-mt-gd-1_55.lib;libboost_filesystem-vc110-mt-gd-1_55.lib;libboost_system-vc110-mt-gd-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x64 mkdir $(ProjectDir)..\..\bin\x64
+if not exist $(ProjectDir)..\..\lib\x64 mkdir $(ProjectDir)..\..\lib\x64
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x64
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x64
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x64\*.dll $(ProjectDir)..\..\bin\x64
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugCPUOnly|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;CPU_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>caffed_cpu_only_x64.lib;libboost_date_time-vc110-mt-gd-1_55.lib;libboost_thread-vc110-mt-gd-1_55.lib;libboost_chrono-vc110-mt-gd-1_55.lib;libboost_filesystem-vc110-mt-gd-1_55.lib;libboost_system-vc110-mt-gd-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x64 mkdir $(ProjectDir)..\..\bin\x64
+if not exist $(ProjectDir)..\..\lib\x64 mkdir $(ProjectDir)..\..\lib\x64
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x64
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x64
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x64\*.dll $(ProjectDir)..\..\bin\x64
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>caffe_x86.lib;libprotobuf.lib;libboost_date_time-vc110-mt-1_55.lib;libboost_thread-vc110-mt-1_55.lib;libboost_chrono-vc110-mt-1_55.lib;libboost_filesystem-vc110-mt-1_55.lib;libboost_system-vc110-mt-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x86 mkdir $(ProjectDir)..\..\bin\x86\
+if not exist $(ProjectDir)..\..\lib\x86 mkdir $(ProjectDir)..\..\lib\x86\
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x86
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x86
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x86\*.dll $(ProjectDir)..\..\bin\x86
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;CPU_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>caffe_cpu_only_x86.lib;libboost_date_time-vc110-mt-1_55.lib;libboost_thread-vc110-mt-1_55.lib;libboost_chrono-vc110-mt-1_55.lib;libboost_filesystem-vc110-mt-1_55.lib;libboost_system-vc110-mt-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x86 mkdir $(ProjectDir)..\..\bin\x86\
+if not exist $(ProjectDir)..\..\lib\x86 mkdir $(ProjectDir)..\..\lib\x86\
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x86
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x86
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x86\*.dll $(ProjectDir)..\..\bin\x86
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>caffe_x64.lib;libprotobuf.lib;libboost_date_time-vc110-mt-1_55.lib;libboost_thread-vc110-mt-1_55.lib;libboost_chrono-vc110-mt-1_55.lib;libboost_filesystem-vc110-mt-1_55.lib;libboost_system-vc110-mt-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x64 mkdir $(ProjectDir)..\..\bin\x64
+if not exist $(ProjectDir)..\..\lib\x64 mkdir $(ProjectDir)..\..\lib\x64
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x64
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x64
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x64\*.dll $(ProjectDir)..\..\bin\x64
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCPUOnly|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;CPU_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\caffe\lib\;$(ProjectDir)..\..\..\caffe\3rdparty\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>caffe_cpu_only_x64.lib;libboost_date_time-vc110-mt-1_55.lib;libboost_thread-vc110-mt-1_55.lib;libboost_chrono-vc110-mt-1_55.lib;libboost_filesystem-vc110-mt-1_55.lib;libboost_system-vc110-mt-1_55.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>if not exist $(ProjectDir)..\..\bin\x64 mkdir $(ProjectDir)..\..\bin\x64
+if not exist $(ProjectDir)..\..\lib\x64 mkdir $(ProjectDir)..\..\lib\x64
+if not exist $(ProjectDir)..\..\include\ mkdir $(ProjectDir)..\..\include\
+copy /Y $(OutDir)$(TargetName)$(TargetExt) $(ProjectDir)..\..\bin\x64
+copy /Y $(OutDir)$(TargetName).lib $(ProjectDir)..\..\lib\x64
+copy /Y $(ProjectDir)..\..\..\caffe\3rdparty\bin\x64\*.dll $(ProjectDir)..\..\bin\x64
+copy /Y $(ProjectDir)..\..\src\CNNEngine.h $(ProjectDir)..\..\include\CNNEngine.h
+copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 6.5.targets" />
+  </ImportGroup>
+</Project>

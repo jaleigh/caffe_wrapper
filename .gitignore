@@ -1,0 +1,9 @@
+/build/msvc/ReleaseCPUOnly
+/build/msvc/x64
+/build/msvc/ipch
+/build/msvc/Debug
+/build/msvc/Release
+/build/msvc/DebugCPUOnly
+/lib
+/include
+/bin
