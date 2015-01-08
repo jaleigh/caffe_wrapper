@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DD4DDEFE-F546-4750-9DCF-F5AC1CFC22A1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CaffeWrapper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF8B17FF2C88E560E6C9EA065587589008C9B02B</key>
+		<string>https://github.com/jaleigh/caffe_wrapper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>build/xcode/CaffeWrapper.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF8B17FF2C88E560E6C9EA065587589008C9B02B</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jaleigh/caffe_wrapper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF8B17FF2C88E560E6C9EA065587589008C9B02B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF8B17FF2C88E560E6C9EA065587589008C9B02B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>caffe_wrapper</string>
+		</dict>
+	</array>
+</dict>
+</plist>

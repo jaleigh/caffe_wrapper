@@ -10,9 +10,11 @@ At present it just provides a Predict function that takes the file path of an im
 
 The repo should sit in the same parent folder as your Caffe repo, e.g. ./Caffe and ./Caffe-wrapper. This is because it references the bin and include folder with the caffe directory. 
 
-It assumes you have already built Caffe using [caffe/jaleigh](https://github.com/jaleigh/caffe).
+It assumes you have already built Caffe using [jaleigh/caffe](https://github.com/jaleigh/caffe).
 
 It currently builds with MS Visual Studio 2012 in 86 and 64 bit configurations. 
+
+There is also an Xcode project. This was created and built with Xcode 6 / OSx 10.10. You will probably have to fix up the include and library paths if trying to build it on a different version. You would also need to have built jaleigh/caffe, i.e. have opencv install via home-brew etc
 
 #### Issues
 

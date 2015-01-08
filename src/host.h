@@ -7,6 +7,12 @@
 	#else
 		#define CNN_EXPORT __declspec(dllimport)
 	#endif
+#else
+    #ifdef CNN_BUILD_DLL
+        #define CNN_EXPORT __attribute__((visibility("default")))
+    #else
+        #define CNN_EXPORT
+    #endif
 #endif
 
 #endif

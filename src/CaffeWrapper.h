@@ -15,13 +15,15 @@ public:
 
 	CaffeWrapper(const char *model_path, const char *trained_params_path);
 
+    ~CaffeWrapper();
+    
 	virtual CNNResult PredictImage(const char *image_filepath);
 
 	virtual CNNResult PredictImage(const char *image_filepath, IMAGE_ORIENTATION orientation);
 
 private:
 
-	std::shared_ptr<caffe::Net<double>> model;
+	caffe::Net<double> *model;
 
 };
 

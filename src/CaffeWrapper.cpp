@@ -20,9 +20,14 @@ CNNEngine()
 	Caffe::set_mode(Caffe::CPU);
 	Caffe::set_phase(Caffe::TEST);
 
-	model = std::shared_ptr<caffe::Net<double>>(new Net<double>(model_path));
+	model = new Net<double>(model_path);
 
 	model->CopyTrainedLayersFrom(trained_params_path);
+}
+
+CaffeWrapper::~CaffeWrapper()
+{
+    delete model;
 }
 
 CNNEngine::CNNResult CaffeWrapper::PredictImage(const char *image_filepath)
