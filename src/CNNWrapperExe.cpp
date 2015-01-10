@@ -1,11 +1,17 @@
 // CNNWrapperExe.cpp : Defines the entry point for the console application.
 //
 
+#ifdef _MSC_VER
 #include "stdafx.h"
+#endif
 #include "CNNEngine.h"
 #include <iostream>
 
+#ifdef _MSC_VER
 int _tmain(int argc, _TCHAR* argv[])
+#else
+int main(int argc, const char *argv[])
+#endif
 {
 	std::string model_path;
 	std::string params_path;
@@ -38,8 +44,11 @@ int _tmain(int argc, _TCHAR* argv[])
 			}
 		}
 	}
-
-	CNN::CNNEngine::GlobalInit(argc, argv);
+    
+    std::string exepath = argv[0];
+    char* arg[1] = {NULL};
+    arg[0] = (char*)exepath.c_str();
+	CNN::CNNEngine::GlobalInit(1, arg);
 
 	CNN::CNNEngine *engine = CNN::CNNEngine::Create(model_path.c_str(), params_path.c_str());
 
@@ -52,7 +61,14 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			printf("Run %s \n", line);
 
-			CNN::CNNEngine::CNNResult res = engine->PredictImage(line);
+            std::string img_path = line;
+            size_t pos = img_path.find_last_not_of('\n');
+            if(pos != std::string::npos)
+            {
+                img_path = img_path.substr(0, pos+1);
+            }
+            
+			CNN::CNNEngine::CNNResult res = engine->PredictImage(img_path.c_str());
 
 			for(int i=0; i < res.NUM_RESULTS; i++)
 			{

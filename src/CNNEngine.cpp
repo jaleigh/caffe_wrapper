@@ -28,7 +28,7 @@ CNNEngine::~CNNEngine()
 void CNNEngine::GlobalInit(int argc, char** argv)
 {
 	caffe::GlobalInit(&argc, &argv);
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined (__MACH__)
 	caffe::InitLayerFactory();
 #endif
 }
