@@ -70,6 +70,8 @@ bool CaffeWrapper::PreprocessAndLoadImage(const char *image_filepath, IMAGE_ORIE
 
 	// resize the image to 256x256 as image needs to be the same size as the mean image used by the memory layer
 	// presumably this should be handled by the transformer.
+	int thumb_width = 256;
+	int thumb_height = 256;
 
 	// following ImageNet, the image is resized so the shortest side if 256, we then crop out a 256x256 from the
 	// centre of the remaining image.
@@ -77,21 +79,29 @@ bool CaffeWrapper::PreprocessAndLoadImage(const char *image_filepath, IMAGE_ORIE
 	cv::Rect rect;
 	if(src.rows > src.cols)
 	{
-		new_size = cv::Size(256, src.rows * (256.f / (float)src.cols));
+		new_size = cv::Size(thumb_width, src.rows * ((float)thumb_width / (float)src.cols));
 		rect.x = 0;
-		rect.width = 256;
-		rect.height = 256;
-		rect.y = (int)(0.5 + (new_size.height - 256) * 0.5f);
+		rect.width = thumb_width;
+		rect.height = thumb_height;
+		rect.y = (int)(0.5 + (new_size.height - thumb_height) * 0.5f);
 	}
 	else
 	{
-		new_size = cv::Size(src.cols * (256.f / (float)src.rows), 256);
+		new_size = cv::Size(src.cols * ((float)thumb_height / (float)src.rows), thumb_height);
 		rect.y = 0;
-		rect.width = 256;
-		rect.height = 256;
-		rect.x = (int)(0.5 + (new_size.width - 256) * 0.5f);
-
+		rect.width = thumb_width;
+		rect.height = thumb_height;
+		rect.x = (int)(0.5 + (new_size.width - thumb_width) * 0.5f);
 	}
+
+	// sanity check the resize
+	if(new_size.height < thumb_height) {
+		new_size.height = thumb_height;
+	}
+	if(new_size.width < thumb_width) {
+		new_size.width = thumb_width;
+	}
+
 	cv::resize(src, dest, new_size);
 	dest = dest(rect);
 
