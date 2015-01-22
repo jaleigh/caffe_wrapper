@@ -199,6 +199,7 @@ copy /Y $(ProjectDir)..\..\src\host.h $(ProjectDir)..\..\include\host.h</Command
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CNN_BUILD_DLL;_CRT_SECURE_NO_WARNINGS;CPU_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\caffe\3rdparty\include;..\..\..\caffe\src;..\..\..\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

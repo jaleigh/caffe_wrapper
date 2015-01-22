@@ -21,6 +21,13 @@ public:
 
 	virtual CNNResult PredictImage(const char *image_filepath, IMAGE_ORIENTATION orientation);
 
+	bool ExtractFeatures(const char *image_filepath, IMAGE_ORIENTATION orientation, CNNEngine::CNNFeature& output);
+
+private:
+
+	bool PreprocessAndLoadImage(const char *image_filepath, IMAGE_ORIENTATION orientation);
+
+// Attributes
 private:
 
 	caffe::Net<double> *model;

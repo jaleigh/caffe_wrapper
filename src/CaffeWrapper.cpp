@@ -35,17 +35,15 @@ CNNEngine::CNNResult CaffeWrapper::PredictImage(const char *image_filepath)
 	return PredictImage(image_filepath, UPRIGHT);
 }
 
-CNNEngine::CNNResult CaffeWrapper::PredictImage(const char *image_filepath, IMAGE_ORIENTATION orientation)
+bool CaffeWrapper::PreprocessAndLoadImage(const char *image_filepath, IMAGE_ORIENTATION orientation)
 {
-	CNNResult result;
-
 	cv::Mat src = cv::imread(image_filepath);
 
 	if(src.cols == 0 || src.rows == 0) {
-		return result;
+		return false;
 	}
 
-	if(orientation != UPRIGHT)
+	if(orientation != UPRIGHT && orientation != ORIENTATION_UNKNOWN)
 	{
 		cv::Mat dest;
 		cv::Mat rot_mat;
@@ -104,6 +102,15 @@ CNNEngine::CNNResult CaffeWrapper::PredictImage(const char *image_filepath, IMAG
 
 	memory_layer->AddMatVector(input, label);
 
+	return true;
+}
+
+CNNEngine::CNNResult CaffeWrapper::PredictImage(const char *image_filepath, IMAGE_ORIENTATION orientation)
+{
+	CNNResult result;
+
+	PreprocessAndLoadImage(image_filepath, orientation);
+
 	// classify the image
 	double loss = 0.f;
 	const vector<Blob<double>*>& output = model->ForwardPrefilled(&loss);
@@ -137,4 +144,35 @@ CNNEngine::CNNResult CaffeWrapper::PredictImage(const char *image_filepath, IMAG
 	} 
 
 	return result;
+}
+
+bool CaffeWrapper::ExtractFeatures(const char *image_filepath, IMAGE_ORIENTATION orientation, CNNEngine::CNNFeature& feature)
+{
+	bool ok = false;
+
+	const std::string layer_name("fc7");
+
+	if(model->has_blob(layer_name))
+	{
+		PreprocessAndLoadImage(image_filepath, orientation);
+
+		// classify the image
+		double loss = 0.f;
+		const vector<Blob<double>*>& output = model->ForwardPrefilled(&loss);
+
+		const boost::shared_ptr<Blob<double> > feature_blob = model->blob_by_name(layer_name);
+
+		const double *data = feature_blob->cpu_data();
+		feature.count = 0;
+
+		for(int i=0; i < feature_blob->count() && i < feature.MAX_COUNT; i++)
+		{
+			feature.values[i] = data[i];
+			feature.count++;
+		}
+
+		ok = true;
+	}
+	
+	return ok;
 }
