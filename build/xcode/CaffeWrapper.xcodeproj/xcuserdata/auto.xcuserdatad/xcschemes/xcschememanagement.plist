@@ -6,13 +6,32 @@
 	<dict>
 		<key>CaffeWrapper.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>CaffeWrapperExe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C934A3CE1A5C337C006BFADA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C934F4DA1A605532006BFADA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C934F4E71A605655006BFADA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

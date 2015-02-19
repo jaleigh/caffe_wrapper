@@ -10,6 +10,8 @@
 	<string>CaffeWrapper</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>4CD8186CE66A0AD46BD21DF2E9F43E65780546D2</key>
+		<string>https://github.com/jaleigh/caffe.git</string>
 		<key>CF8B17FF2C88E560E6C9EA065587589008C9B02B</key>
 		<string>https://github.com/jaleigh/caffe_wrapper.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>build/xcode/CaffeWrapper.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>4CD8186CE66A0AD46BD21DF2E9F43E65780546D2</key>
+		<string>../../../../../caffe</string>
 		<key>CF8B17FF2C88E560E6C9EA065587589008C9B02B</key>
 		<string>../../../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>CF8B17FF2C88E560E6C9EA065587589008C9B02B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4CD8186CE66A0AD46BD21DF2E9F43E65780546D2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>caffe</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

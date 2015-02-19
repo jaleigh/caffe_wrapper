@@ -23,7 +23,6 @@
 		C934F5111A6056E4006BFADA /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F01A6056E3006BFADA /* libboost_system-mt.dylib */; };
 		C934F5121A6056E4006BFADA /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F11A6056E3006BFADA /* libboost_system.dylib */; };
 		C934F5131A6056E4006BFADA /* libboost_thread-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F21A6056E3006BFADA /* libboost_thread-mt.dylib */; };
-		C934F5161A6056E4006BFADA /* libgflags.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F51A6056E3006BFADA /* libgflags.2.dylib */; };
 		C934F5171A6056E4006BFADA /* libglog.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F61A6056E3006BFADA /* libglog.0.dylib */; };
 		C934F5181A6056E4006BFADA /* libHalf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F71A6056E3006BFADA /* libHalf.dylib */; };
 		C934F5191A6056E4006BFADA /* libhdf5_hl.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F81A6056E3006BFADA /* libhdf5_hl.9.dylib */; };
@@ -56,7 +55,6 @@
 		C934F53F1A61515E006BFADA /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F01A6056E3006BFADA /* libboost_system-mt.dylib */; };
 		C934F5401A61515E006BFADA /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F11A6056E3006BFADA /* libboost_system.dylib */; };
 		C934F5411A61515E006BFADA /* libboost_thread-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F21A6056E3006BFADA /* libboost_thread-mt.dylib */; };
-		C934F5421A61515E006BFADA /* libgflags.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F51A6056E3006BFADA /* libgflags.2.dylib */; };
 		C934F5431A61515E006BFADA /* libglog.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F61A6056E3006BFADA /* libglog.0.dylib */; };
 		C934F5441A61515E006BFADA /* libHalf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F71A6056E3006BFADA /* libHalf.dylib */; };
 		C934F5451A61515E006BFADA /* libhdf5_hl.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F4F81A6056E3006BFADA /* libhdf5_hl.9.dylib */; };
@@ -85,6 +83,7 @@
 		C934F55C1A61515F006BFADA /* libsz.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F50F1A6056E4006BFADA /* libsz.2.dylib */; };
 		C934F55D1A61515F006BFADA /* libtiff.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F5101A6056E4006BFADA /* libtiff.dylib */; };
 		C934F55F1A6153C0006BFADA /* libcblas.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C934F55E1A6153C0006BFADA /* libcblas.dylib */; };
+		C9FC35401A9657F5000B895B /* libgflags.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FC353F1A9657F5000B895B /* libgflags.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +138,6 @@
 		C934F4F01A6056E3006BFADA /* libboost_system-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_system-mt.dylib"; path = "../../bin/libboost_system-mt.dylib"; sourceTree = "<group>"; };
 		C934F4F11A6056E3006BFADA /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../bin/libboost_system.dylib; sourceTree = "<group>"; };
 		C934F4F21A6056E3006BFADA /* libboost_thread-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_thread-mt.dylib"; path = "../../bin/libboost_thread-mt.dylib"; sourceTree = "<group>"; };
-		C934F4F51A6056E3006BFADA /* libgflags.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgflags.2.dylib; path = ../../bin/libgflags.2.dylib; sourceTree = "<group>"; };
 		C934F4F61A6056E3006BFADA /* libglog.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglog.0.dylib; path = ../../bin/libglog.0.dylib; sourceTree = "<group>"; };
 		C934F4F71A6056E3006BFADA /* libHalf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libHalf.dylib; path = ../../bin/libHalf.dylib; sourceTree = "<group>"; };
 		C934F4F81A6056E3006BFADA /* libhdf5_hl.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhdf5_hl.9.dylib; path = ../../bin/libhdf5_hl.9.dylib; sourceTree = "<group>"; };
@@ -169,6 +167,7 @@
 		C934F5101A6056E4006BFADA /* libtiff.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtiff.dylib; path = ../../bin/libtiff.dylib; sourceTree = "<group>"; };
 		C934F53D1A60B7D3006BFADA /* libCaffeWrapper.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCaffeWrapper.dylib; path = ../../bin/libCaffeWrapper.dylib; sourceTree = "<group>"; };
 		C934F55E1A6153C0006BFADA /* libcblas.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcblas.dylib; path = usr/lib/libcblas.dylib; sourceTree = SDKROOT; };
+		C9FC353F1A9657F5000B895B /* libgflags.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgflags.a; path = ../../../../../../../usr/local/lib/libgflags.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +179,8 @@
 				C934F53F1A61515E006BFADA /* libboost_system-mt.dylib in Frameworks */,
 				C934F5401A61515E006BFADA /* libboost_system.dylib in Frameworks */,
 				C934F5411A61515E006BFADA /* libboost_thread-mt.dylib in Frameworks */,
-				C934F5421A61515E006BFADA /* libgflags.2.dylib in Frameworks */,
 				C934F5431A61515E006BFADA /* libglog.0.dylib in Frameworks */,
+				C9FC35401A9657F5000B895B /* libgflags.a in Frameworks */,
 				C934F5441A61515E006BFADA /* libHalf.dylib in Frameworks */,
 				C934F5451A61515E006BFADA /* libhdf5_hl.9.dylib in Frameworks */,
 				C934F5461A61515E006BFADA /* libhdf5.9.dylib in Frameworks */,
@@ -225,7 +224,6 @@
 				C934F5111A6056E4006BFADA /* libboost_system-mt.dylib in Frameworks */,
 				C934F5121A6056E4006BFADA /* libboost_system.dylib in Frameworks */,
 				C934F5131A6056E4006BFADA /* libboost_thread-mt.dylib in Frameworks */,
-				C934F5161A6056E4006BFADA /* libgflags.2.dylib in Frameworks */,
 				C934F5171A6056E4006BFADA /* libglog.0.dylib in Frameworks */,
 				C934F5181A6056E4006BFADA /* libHalf.dylib in Frameworks */,
 				C934F5191A6056E4006BFADA /* libhdf5_hl.9.dylib in Frameworks */,
@@ -295,12 +293,12 @@
 		C934F53B1A60A512006BFADA /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				C9FC353F1A9657F5000B895B /* libgflags.a */,
 				C934F55E1A6153C0006BFADA /* libcblas.dylib */,
 				C934F53D1A60B7D3006BFADA /* libCaffeWrapper.dylib */,
 				C934F4F01A6056E3006BFADA /* libboost_system-mt.dylib */,
 				C934F4F11A6056E3006BFADA /* libboost_system.dylib */,
 				C934F4F21A6056E3006BFADA /* libboost_thread-mt.dylib */,
-				C934F4F51A6056E3006BFADA /* libgflags.2.dylib */,
 				C934F4F61A6056E3006BFADA /* libglog.0.dylib */,
 				C934F4F71A6056E3006BFADA /* libHalf.dylib */,
 				C934F4F81A6056E3006BFADA /* libhdf5_hl.9.dylib */,
@@ -358,10 +356,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C934A3D31A5C337C006BFADA /* Build configuration list for PBXNativeTarget "CaffeWrapper" */;
 			buildPhases = (
+				C934F48B1A5DA3A6006BFADA /* Make bin folder and copy opencv */,
+				C9FC35421A965925000B895B /* Copy files to lib folder */,
 				C934A3CB1A5C337C006BFADA /* Sources */,
 				C934A3CC1A5C337C006BFADA /* Frameworks */,
 				C934A3CD1A5C337C006BFADA /* Headers */,
-				C934F48B1A5DA3A6006BFADA /* Make bin folder and copy opencv */,
 				C934F4891A5DA2BA006BFADA /* Copy Files */,
 				C934F4A71A5ED02C006BFADA /* Set dylib exe paths */,
 			);
@@ -441,7 +440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p $PROJECT_DIR/../../bin\n#cp $PROJECT_DIR/../../../caffe/distribute/lib/libCaffe.so $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_core.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_imgproc.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_objdetect.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_highgui.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_legacy.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_ml.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_calib3d.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_video.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_features2d.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_flann.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libjpeg.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libpng.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libtiff.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libImath.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIlmImf.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIex.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIlmThread.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libglog.0.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libglog.0.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libgflags.2.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libprotobuf.9.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libleveldb.1.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libsnappy.1.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/liblmdb.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libhdf5_hl.9.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libhdf5.9.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/opt/boost/lib/libboost_thread-mt.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/opt/boost/lib/libboost_system-mt.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libsz.2.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libHalf.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIexMath.dylib $PROJECT_DIR/../../bin\ncd $PROJECT_DIR/../../bin\nchmod 777 *";
+			shellScript = "mkdir -p $PROJECT_DIR/../../bin\n#cp $PROJECT_DIR/../../../caffe/distribute/lib/libCaffe.so $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_core.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_imgproc.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_objdetect.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_highgui.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_legacy.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_ml.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_calib3d.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_video.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_features2d.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libopencv_flann.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libjpeg.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libpng.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libtiff.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libImath.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIlmImf.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIex.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIlmThread.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libglog.0.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libprotobuf.9.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libleveldb.1.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libsnappy.1.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/liblmdb.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libhdf5_hl.9.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libhdf5.9.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/opt/boost/lib/libboost_thread-mt.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/opt/boost/lib/libboost_system-mt.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libsz.2.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libHalf.dylib $PROJECT_DIR/../../bin\ncp -L /usr/local/lib/libIexMath.dylib $PROJECT_DIR/../../bin\ncd $PROJECT_DIR/../../bin\nchmod 777 *";
 		};
 		C934F4A71A5ED02C006BFADA /* Set dylib exe paths */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -470,6 +469,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cd $BUILT_PRODUCTS_DIR\ninstall_name_tool -change /usr/local/lib/libCaffeWrapper.dylib @loader_path/libCaffeWrapper.dylib CaffeWrapperExe";
+		};
+		C9FC35421A965925000B895B /* Copy files to lib folder */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy files to lib folder";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -L /usr/local/lib/libgflags.a $PROJECT_DIR/../../lib/release\ncp -L /usr/local/lib/libgflags.a $PROJECT_DIR/../../lib/debug\ncd $PROJECT_DIR/../../lib/release\nchmod 777 *\ncd $PROJECT_DIR/../../lib/debug\nchmod 777 *";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -732,6 +745,7 @@
 				C934F4ED1A605655006BFADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
