@@ -30,7 +30,7 @@ private:
 // Attributes
 private:
 
-	caffe::Net<double> *model;
+	caffe::Net<float> *model;
 
 };
 

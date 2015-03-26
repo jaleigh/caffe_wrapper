@@ -18,9 +18,8 @@ CaffeWrapper::CaffeWrapper(const char *model_path, const char *trained_params_pa
 CNNEngine()
 {
 	Caffe::set_mode(Caffe::CPU);
-	Caffe::set_phase(Caffe::TEST);
 
-	model = new Net<double>(model_path);
+    model = new Net<float>(model_path, caffe::TEST);
 
 	model->CopyTrainedLayersFrom(trained_params_path);
 }
@@ -122,8 +121,8 @@ CNNEngine::CNNResult CaffeWrapper::PredictImage(const char *image_filepath, IMAG
 	PreprocessAndLoadImage(image_filepath, orientation);
 
 	// classify the image
-	double loss = 0.f;
-	const vector<Blob<double>*>& output = model->ForwardPrefilled(&loss);
+	float loss = 0.f;
+	const vector<Blob<float>*>& output = model->ForwardPrefilled(&loss);
 
 	// populate the results, store the top N results, store the scores and the string
 	for(int n=0; n < CNNResult::NUM_RESULTS; n++)
@@ -167,12 +166,12 @@ bool CaffeWrapper::ExtractFeatures(const char *image_filepath, IMAGE_ORIENTATION
 		PreprocessAndLoadImage(image_filepath, orientation);
 
 		// classify the image
-		double loss = 0.f;
-		const vector<Blob<double>*>& output = model->ForwardPrefilled(&loss);
+		float loss = 0.f;
+		const vector<Blob<float>*>& output = model->ForwardPrefilled(&loss);
 
-		const boost::shared_ptr<Blob<double> > feature_blob = model->blob_by_name(layer_name);
+		const boost::shared_ptr<Blob<float> > feature_blob = model->blob_by_name(layer_name);
 
-		const double *data = feature_blob->cpu_data();
+		const float *data = feature_blob->cpu_data();
 		feature.count = 0;
 
 		for(int i=0; i < feature_blob->count() && i < feature.MAX_COUNT; i++)
